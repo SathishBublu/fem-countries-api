@@ -18,7 +18,7 @@ const Header = () => {
     } else {
       htmlTag.setAttribute('data-theme', localStorage.getItem('theme'));
     }
-  }, []);
+  }, [htmlTag, setTheme]);
 
   const themeToggle = () => {
     if (theme !== 'light') {

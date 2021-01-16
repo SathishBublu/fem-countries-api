@@ -8,7 +8,7 @@ const CountriesContainer = ({ children }) => {
 
   useEffect(() => {
     grid && setGridChildren(grid.children.length);
-  }, [searchTerm, filterByRegion]);
+  }, [searchTerm, filterByRegion, grid]);
 
   return (
     <>
