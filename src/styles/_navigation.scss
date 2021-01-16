@@ -1,0 +1,99 @@
+.navigation__bar {
+    display: flex;
+    justify-content: space-between;
+    margin: 50px 0;
+
+    & > * {
+        height: 50px;
+    }
+
+    // Search bar
+    .search__input {
+        display: flex;
+        position: relative;
+        width: 55%; max-width: 400px;
+        
+        & > *, ::placeholder {
+            color: var(--text);
+        }
+    
+        &--bar {
+            font-family: inherit;
+            padding-left: 55px;
+            background-color: var(--element-bg);
+            border: 0;
+            border-radius: 5px;
+            width: 100%;
+            box-shadow: 0 0px 3px 1px rgba(0, 0, 0, .1);
+        }
+    
+        img {
+            position: absolute;
+            top: 50%; transform: translateY(-50%);
+            left: 20px;
+            height: 18px; width: 18px;
+        }
+    }
+
+
+    // Filter
+    .filter__box {
+        display: flex;
+        flex-direction: column;
+        position: relative;
+        width: 175px;
+
+        & > * {
+            color: var(--text);
+            border-radius: 5px;
+        }
+    
+        &__deployment {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            background-color: var(--element-bg);
+            box-shadow: 0 0px 3px 1px rgba(0, 0, 0, .1);
+            height: 100%;
+            padding: 0 20px; 
+            margin-bottom: 5px;
+
+            img {
+                height: 13px; width: 13px;
+            }
+        }
+    
+        &__list {
+            display: none;
+            position: absolute;
+            background-color: var(--element-bg);
+            box-shadow: 0px 1px 2px 1px rgba(0, 0, 0, .1);
+            padding: 15px 20px;
+            font-size: 13px;
+            font-weight: 600;
+            letter-spacing: 0.5px;           
+            width: 100%;
+            top: 50px;
+
+            &.active {
+                display: block;
+            }
+    
+            &__item {
+                cursor: pointer;
+                margin-bottom: 7px;
+                &:last-of-type { margin-bottom: 0 }
+            }
+        }
+    }
+
+    @media screen and (max-width: 600px) {
+        flex-direction: column;
+        margin: 30px 0;
+
+        .search__input {
+            margin-bottom: 25px;
+            width: 100%;
+        }
+    }
+}

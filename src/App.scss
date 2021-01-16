@@ -1,0 +1,16 @@
+// Global
+@import 'styles/global';
+
+//Theme Toggle
+@import 'styles/themeToggle';
+
+// Home page
+@import 'styles/header';
+@import 'styles/navigation';
+@import 'styles/mainGrid'; // Main grid + country links
+
+// Country Page
+@import 'styles/countryPage';
+
+// Spinner
+@import 'styles/spinner';

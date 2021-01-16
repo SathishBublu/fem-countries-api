@@ -1,0 +1,32 @@
+:root {
+    --dark-blue: hsl(209, 23%, 22%);
+    --very-dark-blue: hsl(207, 26%, 17%);
+    --almost-black: hsl(200, 15%, 8%);
+    --dark-gray: hsl(0, 0%, 52%);
+    --very-light-gray: hsl(0, 0%, 98%);
+    --white: hsl(0, 0%, 100%);
+}
+
+
+html {
+    font-family: 'Nunito Sans', sans-serif;   
+    background-color: var(--bg);
+}
+
+html[data-theme="light"] {
+    --bg: var(--very-light-gray);
+    --text: var(--very-dark-blue);
+    --element-bg: var(--white);
+    --search-bar: var(--dark-gray);
+    --spinner-bg: var(--very-light-gray);
+    --currency: #E22106; 
+}
+
+html[data-theme="dark"] {
+    --bg: var(--very-dark-blue);
+    --text: var(--white);
+    --element-bg: var(--dark-blue);
+    --search-bar: var(--very-light-gray);
+    --spinner-bg: var(--dark-blue);
+    --currency: #91FFB0;
+}

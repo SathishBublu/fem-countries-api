@@ -1,0 +1,55 @@
+.wrapper {
+    margin: 75px auto 0;
+    position: relative;
+    width: 300px;
+    height: 300px;
+    border-radius: 5px;
+    background-color: var(--spinner-bg);
+
+    .loading__animation .ball__holder {
+        animation: aroundTheWorld 4s linear infinite;
+    }
+
+    .loading__animation {
+        display: flex;
+        align-items: center;
+
+        &__text {
+            position: absolute;
+            color: var(--text);
+            letter-spacing: 2px;
+            left: 116px; top: 140px;
+        }
+    }
+
+    .ring {
+        position: relative;
+        width: 200px; height: 200px;
+        margin: 50px auto 0;
+        border: 3px solid #4b9cdb;
+        border-radius: 100%;
+
+        .ball__holder {
+            position: absolute;
+            width: 10px;
+            height: 198px;
+            left: calc(100px - 8px);
+            top: -3px;
+
+            .ball {
+                position: absolute;
+                top: -19px;
+                left: -5px;
+                width: 40px; height: 40px;
+                border-radius: 100%;
+                background-color: var(--spinner-bg);
+            }
+        }
+    }
+}
+
+
+@keyframes aroundTheWorld {
+    0% { transform: rotate(0deg) }
+    100% { transform: rotate(360deg) }
+}
